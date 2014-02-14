@@ -1,18 +1,18 @@
-var deferedStart = new Date().getTime(),
-    deferedEnd,
+var delayedStart = new Date().getTime(),
+    delayedEnd,
     p = document.createElement("p"),
     text = '';
 
-text += deferedStart + ' -gt; Defered/async start';
+text += delayedStart + ' -gt; delayed start';
 
 for (var i = 1; i <= 5000; i++) {
     p.innerHTML += 'Lorem' + i;
-    document.querySelector('#add').appendChild(p);
+    document.getElementById('addText').appendChild(p);
 }
 
-deferedEnd = new Date().getTime();
+delayedEnd = new Date().getTime();
 
-text += deferedEnd + ' -gt; Defered/async start';
-text += deferedEnd - deferedStart + ' -gt; start - end';
+text += delayedEnd + ' -gt; delayed end';
+text += delayedEnd - delayedStart + ' -gt; start - end';
 
-document.getElementById('addtext').innerHTML = text;
+document.getElementById('addDelayed').innerHTML = text;
