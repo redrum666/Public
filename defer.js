@@ -13,6 +13,6 @@ for (var i = 1; i <= 5000; i++) {
 delayedEnd = new Date().getTime();
 
 text += delayedEnd + ' delayed end<br>';
-text += 'Delayed by' + (delayedEnd - delayedStart);
+text += 'Delayed by ' + (delayedEnd - delayedStart) + ' ms';
 
 document.getElementById('addDelayed').innerHTML = text;
